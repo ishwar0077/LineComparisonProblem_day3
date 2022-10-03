@@ -17,21 +17,26 @@ namespace LineComparisonProblem
             int y1 = 4;
             int x2 = 4;
             int y2 = 3;
-            int x3 = 4, x4 = 5, y3 = 5, y4 = 4;
+            int x3 = 4, x4 = 6, y3 = 5, y4 = 4;
             // Calculating distance
             double lengthOfLine1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
             double lengthOfLine2 = Math.Sqrt(Math.Pow(x4 - x3, 2) + Math.Pow(y4 - y3, 2));
-            Console.WriteLine("Lenth of Line is: " + lengthOfLine1);
-            Console.WriteLine("Lenth of Line is: " + lengthOfLine2);
+            Console.WriteLine("Lenth of Line1 is: " + lengthOfLine1);
+            Console.WriteLine("Lenth of Line2 is: " + lengthOfLine2);
             if(lengthOfLine1 == lengthOfLine2)
             {
                 Console.WriteLine("line1 and line2 are equal");
             }
+            else if(lengthOfLine1 > lengthOfLine2)
+            {
+                Console.WriteLine("line1 greater than line2");
+            }
             else
             {
-                Console.WriteLine("line1 and line2 are not equal");
+                Console.WriteLine("line2 greater than line1");
             }
 
+          
         }
     }
 }
