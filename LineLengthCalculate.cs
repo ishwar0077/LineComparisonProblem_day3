@@ -18,7 +18,7 @@ namespace LineComparisonProblem
             int x2 = 4;
             int y2 = 3;
 
-            //variable of line2
+            //variable for line2
             int x3 = 4, x4 = 5, y3 = 5, y4 = 4;
             // Calculating distance
             double lengthOfLine1 = Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
@@ -26,19 +26,25 @@ namespace LineComparisonProblem
             Console.WriteLine("Lenth of Line1 is: " + lengthOfLine1);
             Console.WriteLine("Lenth of Line2 is: " + lengthOfLine2);
 
-            bool status = lengthOfLine1.Equals(lengthOfLine2);
+            int status = lengthOfLine1.CompareTo(lengthOfLine2);
 
             // checking the status
-            if (status)
+            if (status > 0)
             {
-                Console.WriteLine("{0} is equal to {1}",
+                Console.WriteLine("{0} is greater than {1}",
                                         lengthOfLine1, lengthOfLine2);
+            }
+            else if(status < 0 )
+            {
+                Console.WriteLine("{0} is less than {1}",
+                                            lengthOfLine1, lengthOfLine2);
             }
             else
             {
-                Console.WriteLine("{0} is not equal to {1}",
+                Console.WriteLine("{0} is equals to {1}",
                                             lengthOfLine1, lengthOfLine2);
             }
+           
         }
     }
 }
