@@ -39,8 +39,6 @@ namespace LineComparisonProblem
                 Console.WriteLine("{0} is not equal to {1}",
                                             lengthOfLine1, lengthOfLine2);
             }
-
-            Console.WriteLine(" comatrTo method retun:  " + lengthOfLine1.CompareTo(lengthOfLine2));
         }
     }
 }
